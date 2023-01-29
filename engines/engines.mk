@@ -143,6 +143,11 @@ DEFINES += -DENABLE_DREAMWEB=$(ENABLE_DREAMWEB)
 MODULES += engines/dreamweb
 endif
 
+ifdef ENABLE_FREESCAPE
+DEFINES += -DENABLE_FREESCAPE=$(ENABLE_FREESCAPE)
+MODULES += engines/freescape
+endif
+
 ifdef ENABLE_GLK
 DEFINES += -DENABLE_GLK=$(ENABLE_GLK)
 MODULES += engines/glk
@@ -194,6 +199,11 @@ endif
 ifdef ENABLE_HOPKINS
 DEFINES += -DENABLE_HOPKINS=$(ENABLE_HOPKINS)
 MODULES += engines/hopkins
+endif
+
+ifdef ENABLE_HPL1
+DEFINES += -DENABLE_HPL1=$(ENABLE_HPL1)
+MODULES += engines/hpl1
 endif
 
 ifdef ENABLE_HUGO
@@ -271,6 +281,11 @@ MODULES += engines/mads
 ifdef ENABLE_MADSV2
 DEFINES += -DENABLE_MADSV2
 endif
+endif
+
+ifdef ENABLE_MM
+DEFINES += -DENABLE_MM=$(ENABLE_MM)
+MODULES += engines/mm
 endif
 
 ifdef ENABLE_MOHAWK
@@ -452,6 +467,11 @@ DEFINES += -DENABLE_TESTBED=$(ENABLE_TESTBED)
 MODULES += engines/testbed
 endif
 
+ifdef ENABLE_TETRAEDGE
+DEFINES += -DENABLE_TETRAEDGE=$(ENABLE_TETRAEDGE)
+MODULES += engines/tetraedge
+endif
+
 ifdef ENABLE_TINSEL
 DEFINES += -DENABLE_TINSEL=$(ENABLE_TINSEL)
 MODULES += engines/tinsel
@@ -532,11 +552,6 @@ endif
 ifdef ENABLE_WME3D
 DEFINES += -DENABLE_WME3D
 endif
-endif
-
-ifdef ENABLE_XEEN
-DEFINES += -DENABLE_XEEN=$(ENABLE_XEEN)
-MODULES += engines/xeen
 endif
 
 ifdef ENABLE_ZVISION
